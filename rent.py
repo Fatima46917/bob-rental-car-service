@@ -1,10 +1,10 @@
 vehicles = []
 class vehicles:
-  def __init__(self, brand, model, year, price):
+  def __init__(self, brand, model, year, daily_price):
     self.brand = brand
     self.model = model
     self.year = year
-    self.__rental_price_per_day = price
+    self.__rental_price_per_day = daily_price
 
   def getrental_price_per_day (self):
     return self.__rental_price_per_day
@@ -24,12 +24,32 @@ class vehicles:
     print(self.number_of_days * self.__rental_price_per_day)
 
 class car (vehicles) :
-  def __init__(self, brand, model, year, price, seating_capacity):
+  def __init__(self, brand, model, year, daily_price, seating_capacity):
+    super().__init__(brand, model, year, daily_price)
     self.seating_capacity = seating_capacity
-    super().__init__(brand, model, year, price)
 
+  def display(self):
+   super().display()
+   print(f"seating_capacity:{self.seating_capacity}")
+
+  
 class bike (vehicles):
-  def __init__(self, brand, model, year, price, engine_capacity):
+  def __init__(self, brand, model, year, daily_price, engine_capacity):
     self.engine_capacity = engine_capacity
-    super().__init__(brand, model, year, price)
+    super().__init__(brand, model, year, daily_price)
+
+  def display(self):
+    super().display()
+    print(f"engine_capacity:{self.engine_capacity}")
+  
+
+
+vehicle1 = car ("Toyota", "corolla", 2020, "50$/day", 5)
+vehicle1.display()
+print("================")
+vehicle2 = bike("yamaha", "R1", 2019, "30$/day", "998cc")
+vehicle2.display()
+
+
+
 
