@@ -1,7 +1,13 @@
+vehicles = []
 class vehicles:
-  def __init__(self, vehicle, brand_model, year, rental_price_per_day):
-    self.vehicle = vehicle
-    self.brand_model = brand_model
+  def __init__(self, brand, model, year, rental_price_per_day):
+    self.brand = brand
+    self.model = model
     self.year = year
     self.rental_price_per_day = rental_price_per_day
 
+  def display(self):
+    print (f"brand :{self.brand}")
+    print (f"model : {self.model}")
+    print (f"year:{self.year}")
+    print (f"rental_price_per_day:{self.rental_price_per_day}")
