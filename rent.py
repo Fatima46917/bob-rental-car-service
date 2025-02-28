@@ -6,6 +6,12 @@ class vehicles:
     self.year = year
     self.__rental_price_per_day = price
 
+  def getrental_price_per_day (self):
+    return self.__rental_price_per_day
+  
+  def setrental_price_per_day (self, vehicle_rent_price):
+    self.__rental_price_per_day = vehicle_rent_price
+
   def display(self):
     print (f"brand :{self.brand}")
     print (f"model : {self.model}")
