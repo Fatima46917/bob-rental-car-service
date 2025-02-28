@@ -44,11 +44,17 @@ class bike (vehicles):
   
 
 
-vehicle1 = car ("Toyota", "corolla", 2020, "50$/day", 5)
+vehicle1 = car ("Toyota", "corolla", 2020, 50, 5)
 vehicle1.display()
 print("================")
-vehicle2 = bike("yamaha", "R1", 2019, "30$/day", "998cc")
+
+vehicle2 = bike("yamaha", "R1", 2019, 30, "998cc")
 vehicle2.display()
+print("=============")
+
+vehicle1.rental_cost_per_days(3)
+print("===========")
+vehicle2.rental_cost_per_days(5)
 
 
 
